@@ -138,7 +138,7 @@ class Recipe(object):
             for filter_ in filters:
                 try:
                     jinja2_filters[filter_.split('.')[-1]] = resolve_dotted(filter_)
-                except ImportError, e:
+                except ImportError as e:
                     raise zc.buildout.UserError("Filter '%s' not found.\n%s"
                                                 % (filter_, e))
         else:
@@ -203,7 +203,7 @@ class Recipe(object):
 
         try:
             return env.get_template(path)
-        except jinja2.TemplateNotFound, e:
+        except jinja2.TemplateNotFound as e:
             log.error("Could not find the template file: %s" % e.name)
             raise zc.buildout.UserError("Template file not found: %s" % e.name)
 
