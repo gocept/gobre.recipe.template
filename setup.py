@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="brodul.recipe.template",
-    version="1.2.1",
-    author="Andraz Brodnik",
-    author_email="brodul@brodul.org",
-    url="http://github.com/brodul/amplecode.recipe.template",
+    name="xoxzo.recipe.template",
+    version="1.2.2",
+    author="Abdul Rahman Ibrahim",
+    author_email="rahman@xoxzo.com",
+    url="https://github.com/xoxzo/amplecode.recipe.template",
     description="Buildout recipe for making files out of Jinja2 templates",
     long_description=open("README.rst").read(),
     classifiers=(
