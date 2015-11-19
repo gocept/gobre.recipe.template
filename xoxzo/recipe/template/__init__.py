@@ -74,7 +74,7 @@ class Recipe(object):
             to be strings. The same dictionary object is returned.
             """
 
-            for k, v in d.iteritems():
+            for k, v in d.items():
                 d[k] = v.strip()
             return d
 
