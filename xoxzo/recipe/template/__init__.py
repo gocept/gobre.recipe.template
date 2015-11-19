@@ -99,7 +99,7 @@ class Recipe(object):
         target_executables = [as_bool(v) for v in target_executables]
         if len(target_executables) == 1:
             value = target_executables[0]
-            target_executables = (value for i in xrange(len(template_files)))
+            target_executables = (value for i in range(len(template_files)))
         else:
             if len(target_executables) != len(template_files):
                 raise zc.buildout.UserError("The number of target executables"
