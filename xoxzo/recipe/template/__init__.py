@@ -213,4 +213,4 @@ class Recipe(object):
         """
 
         if directory and not os.path.exists(directory):
-            os.makedirs(directory, 0755)
+            os.makedirs(directory, 0o755)
