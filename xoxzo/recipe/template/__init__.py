@@ -169,7 +169,7 @@ class Recipe(object):
 
             # Chmod target file
             if executable:
-                os.chmod(target_file, 0755)
+                os.chmod(target_file, 0o755)
 
             self.options.created(target_file)
 
