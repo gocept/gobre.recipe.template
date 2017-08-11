@@ -23,7 +23,12 @@ setup(
     license="BSD",
     packages=find_packages(),
     namespace_packages=("gobre", "gobre.recipe"),
-    install_requires=("setuptools", "zc.recipe.egg", "Jinja2", "zope.dottedname"),
+    install_requires=(
+        "setuptools",
+        "zc.recipe.egg",
+        "Jinja2",
+        "zope.dottedname",
+    ),
     zip_safe=True,
     entry_points="""
         [zc.buildout]
