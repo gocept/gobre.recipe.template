@@ -1,12 +1,12 @@
 ======================
-brodul.recipe.template
+gobre.recipe.template
 ======================
 
-brodul.recipe.template is a fork of amplecode.recipe.template, a Buildout recipe for generating files using Jinja2 templates. The recipe configures a Jinja2 environment, by default relative to the Buildout directory, allowing templates to extend and include other templates relative to the environment.
+gobre.recipe.template is a fork of amplecode.recipe.template, a Buildout recipe for generating files using Jinja2 templates. The recipe configures a Jinja2 environment, by default relative to the Buildout directory, allowing templates to extend and include other templates relative to the environment.
 
-Downloads are available from pypi: http://pypi.python.org/pypi/brodul.recipe.template/
+Downloads are available from pypi: http://pypi.python.org/pypi/gobre.recipe.template/
 
-.. image:: https://secure.travis-ci.org/brodul/amplecode.recipe.template.png
+.. image:: https://travis-ci.org/gocept/gobre.recipe.template.png
 
 Buildout Options
 ================
@@ -39,7 +39,7 @@ foo.txt is created from foo.txt.jinja2 without any extra options::
   parts = foo
 
   [foo]
-  recipe = brodul.recipe.template
+  recipe = gobre.recipe.template
   template-file = foo.txt.jinja2
   target-file = foo.txt
 
@@ -52,7 +52,7 @@ foo.txt is created from myapp/foo.txt.jinja2, bar.sh is created from myapp/bar.s
   parts = foo
 
   [foo]
-  recipe = brodul.recipe.template
+  recipe = gobre.recipe.template
   base-dir = myapp
   template-file =
       foo.txt.jinja2
@@ -78,15 +78,15 @@ foo.txt.jinja2:
   {{ author }}
 
 .. note::
-  
+
   `{{ parts.bar.dashed-value }}` won't work, but you can access it as a dict key.
 
 Dashed value in the same part
 =============================
 
-If there is a dashed-value in brodul.recipe.template part and you would like to reference it, use:
+If there is a dashed-value in gobre.recipe.template part and you would like to reference it, use:
 ::
-  
+
   {{context['dashed-value']}}
 
 
@@ -99,7 +99,7 @@ The filter function is located in the same directory as the buildout.cfg in a fi
   parts = foo
 
   [foo]
-  recipe = brodul.recipe.template
+  recipe = gobre.recipe.template
   input = foo.txt.jinja2
   output = foo.txt
   jinja2_filters = filter.bar
