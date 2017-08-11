@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="gobre.recipe.template",
-    version="1.2.4",
+    version="1.3.dev0",
     author="gocept",
     author_email="mail@gocept.com",
     url="https://github.com/gocept/gobre.recipe.template",
@@ -12,7 +12,9 @@ setup(
         "Framework :: Buildout",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: BSD License",
-        "Programming Language :: Python",
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: Implementation :: CPython",
         "Topic :: Software Development",
         "Topic :: Software Development :: Code Generators",
         "Topic :: Software Development :: Pre-processors",
@@ -21,7 +23,12 @@ setup(
     license="BSD",
     packages=find_packages(),
     namespace_packages=("gobre", "gobre.recipe"),
-    install_requires=("setuptools", "zc.recipe.egg", "Jinja2", "zope.dottedname"),
+    install_requires=(
+        "setuptools",
+        "zc.recipe.egg",
+        "Jinja2",
+        "zope.dottedname",
+    ),
     zip_safe=True,
     entry_points="""
         [zc.buildout]
