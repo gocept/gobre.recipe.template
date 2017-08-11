@@ -123,3 +123,4 @@ Why this fork
 * there should be an input and output option in buildout (since the '-' in 'target-file' char is parsed by jinja2)
 * custom filters support
 * templates should not have the ability to change state of buildout
+* Gather the changes of the other forks (buildout 2 support and Python 3 support + fixes into a new package).
