@@ -3,7 +3,7 @@ Buildout recipe for making files out of Jinja2 templates.
 """
 
 __author__ = 'Torgeir Lorange Ostby <torgeilo@gmail.com>'
-__version__ = '1.1'
+__version__ = '1.2.4'
 
 import logging
 import os
@@ -37,7 +37,6 @@ class Recipe(object):
 
         # Add buildout dir to python path so custom filter can be imported
         sys.path.append(self.buildout['buildout']['directory'])
-
 
         # Validate presence of required options
         if not ("template-file" in options or "input" in options):
