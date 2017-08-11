@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="gobre.recipe.template",
-    version="1.2.2",
+    version="1.2.4",
     author="gocept",
     author_email="mail@gocept.com",
     url="https://github.com/gocept/gobre.recipe.template",

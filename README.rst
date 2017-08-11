@@ -7,6 +7,7 @@ gobre.recipe.template is a fork of amplecode.recipe.template, a Buildout recipe 
 Downloads are available from pypi: http://pypi.python.org/pypi/gobre.recipe.template/
 
 .. image:: https://travis-ci.org/gocept/gobre.recipe.template.png
+    :target: https://travis-ci.org/gocept/gobre.recipe.template
 
 Buildout Options
 ================
@@ -115,12 +116,10 @@ License
 
 See the LICENSE file
 
-Todo
-====
-
 
 Why this fork
 =============
 
 * there should be an input and output option in buildout (since the '-' in 'target-file' char is parsed by jinja2)
 * custom filters support
+* templates should not have the ability to change state of buildout
