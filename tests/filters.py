@@ -6,10 +6,10 @@ def riba(s):
     return s
 
 
-def lwrap(l, w=None):
+def lwrap(list_, w=None):
     """docstring for lwrap"""
     result = []
     o = w or '"'
-    for elem in l:
+    for elem in list_:
         result.append(o + elem + o)
     return result

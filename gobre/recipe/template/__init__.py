@@ -141,7 +141,8 @@ class Recipe(object):
             filters = filters.split()
             for filter_ in filters:
                 try:
-                    jinja2_filters[filter_.split('.')[-1]] = resolve_dotted(filter_)
+                    jinja2_filters[filter_.split('.')[-1]] = resolve_dotted(
+                        filter_)
                 except ImportError as e:
                     raise zc.buildout.UserError("Filter '%s' not found.\n%s"
                                                 % (filter_, e))

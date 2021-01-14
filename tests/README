@@ -2,4 +2,4 @@ To run the tests, issue the following commands:
 
 $ python bootstrap.py
 $ bin/buildout
-$ bin/test
+$ bin/nosetests

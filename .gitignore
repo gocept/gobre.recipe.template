@@ -1,9 +1,10 @@
-bin
-build
-develop-eggs
-dist
-eggs
-parts
 *.egg-info
 *.pyc
 .installed.cfg
+.tox/
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+parts/

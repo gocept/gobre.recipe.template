@@ -3,6 +3,7 @@ import unittest
 
 import zc.buildout.buildout
 
+
 class TemplateTest(unittest.TestCase):
 
     def setUp(self):
@@ -39,8 +40,5 @@ class TemplateTest(unittest.TestCase):
     def tearDown(self):
         try:
             os.remove("test.out")
-        except:
+        except:  # noqa: E722 do not use bare 'except'
             pass
-
-if "__main__" == __name__:
-    unittest.main()

@@ -49,8 +49,8 @@ parser.add_option("--version",
 parser.add_option("-t", "--accept-buildout-test-releases",
                   dest='accept_buildout_test_releases',
                   action="store_true", default=False,
-                  help=("Normally, if you do not specify a --buildout-version, "
-                        "the bootstrap script and buildout gets the newest "
+                  help=("Normally, if you do not specify a --buildout-version,"
+                        " the bootstrap script and buildout gets the newest "
                         "*final* versions of zc.buildout and its recipes and "
                         "extensions for you.  If you use this flag, "
                         "bootstrap and buildout will get the newest releases "
@@ -115,8 +115,8 @@ if options.setuptools_to_dir is not None:
     setup_args['to_dir'] = options.setuptools_to_dir
 
 ez['use_setuptools'](**setup_args)
-import setuptools
-import pkg_resources
+import setuptools  # noqa: E402 module level import not at top of file
+import pkg_resources  # noqa: E402 module level import not at top of file
 
 # This does not (always?) update the default working set.  We will
 # do it.
@@ -187,7 +187,7 @@ if version:
     requirement = '=='.join((requirement, version))
 cmd.append(requirement)
 
-import subprocess
+import subprocess  # noqa: E402 module level import not at top of file
 if subprocess.call(cmd) != 0:
     raise Exception(
         "Failed to execute command:\n%s" % repr(cmd)[1:-1])
@@ -197,7 +197,7 @@ if subprocess.call(cmd) != 0:
 
 ws.add_entry(tmpeggs)
 ws.require(requirement)
-import zc.buildout.buildout
+import zc.buildout.buildout  # noqa: E402 module level import too late
 
 if not [a for a in args if '=' not in a]:
     args.append('bootstrap')
