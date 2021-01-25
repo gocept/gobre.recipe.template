@@ -5,15 +5,14 @@ Buildout recipe for making files out of Jinja2 templates.
 __author__ = 'Torgeir Lorange Ostby <torgeilo@gmail.com>'
 __version__ = '1.2.4'
 
+from zc.recipe.egg.egg import Eggs
+from zope.dottedname.resolve import resolve as resolve_dotted
+import jinja2
 import logging
 import os
 import re
 import sys
-
-import jinja2
 import zc.buildout
-from zc.recipe.egg.egg import Eggs
-from zope.dottedname.resolve import resolve as resolve_dotted
 
 
 log = logging.getLogger(__name__)
